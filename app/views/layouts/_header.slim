@@ -1,0 +1,10 @@
+nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      a.navbar-brand[href="#{root_path}"] = @user.user_name
+    ul.nav.navbar-nav
+      li class="#{'active' if params[:action] == 'index'}"
+        a[href="#{root_path}"]
+          | Home
+      li class="#{'active' if params[:action] == 'leader_board'}"
+        = link_to 'Leader Board', leader_board_path

@@ -1,0 +1,23 @@
+.container
+  .table-responsive
+    table.table
+      thead
+        tr
+          th
+            | User Name
+          th
+            | Count
+          th
+            | Color Used
+      tbody
+        tr
+          td = @user.user_name
+
+          td = @max_count[:count]
+
+          td
+            table
+              tbody
+                - @user.user_squares.each do |user_square|
+                  tr
+                    td = user_square.color

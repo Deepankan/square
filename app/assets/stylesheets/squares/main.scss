@@ -1,0 +1,9 @@
+.box {
+  @include square(40px);
+
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+

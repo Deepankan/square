@@ -1,0 +1,7 @@
+- @squares.each do |square|
+  .row
+    .col-md-12
+      - square.each do |sqr|
+        input.box.element-spacer-right-15.element-spacer-bottom-15[type="color" value="#{sqr.current_color}" id="#{sqr.id}" data-toggle="tooltip" title="User Name: #{sqr.user_name.present? ? sqr.user_name : '-'} | Update On: #{sqr.user_name.present? ? sqr.created_at.strftime("#{sqr.created_at.day.ordinalize} %B %Y") : '-'} "]
+        / span.tooltiptext
+        /   | Tooltip text
